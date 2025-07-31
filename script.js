@@ -1,10 +1,12 @@
 
-document.addEventListener('scroll', () => {
-  document.querySelectorAll('section').forEach(sec => {
-    let rect = sec.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom >= 0) {
-      sec.style.opacity = 1;
-      sec.style.transition = 'opacity 1s ease-in';
+function revealOnScroll() {
+  const sections = document.querySelectorAll('.fade-in');
+  for (let sec of sections) {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      sec.classList.add('visible');
     }
-  });
-});
+  }
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);

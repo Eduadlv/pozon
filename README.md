@@ -1,6 +1,6 @@
 
-# Barras contra el destino
-Este es un reportaje interactivo sobre jóvenes de El Pozón, Cartagena.
+# Barras contra el destino - Versión avanzada
+Este es un reportaje interactivo con animaciones tipo parallax y efectos de aparición.
 
 ## Cómo visualizar
 1. Abrir `index.html` en cualquier navegador.

@@ -1,7 +1,23 @@
 
 body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333;}
-header {background:#222; color:#fff; padding:60px 20px; text-align:center;}
-header h1 {font-size:3em;}
-section {padding:40px 20px; max-width:900px; margin:auto;}
+header.parallax {
+  background: url('images/parque.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+header .overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 50px;
+}
+header h1 {font-size:4em; text-shadow:2px 2px 8px #000;}
+header h3 {font-size:1.5em; font-weight:normal; text-shadow:1px 1px 6px #000;}
+section {padding:60px 20px; max-width:900px; margin:auto; opacity:0; transform: translateY(20px);}
+section.fade-in.visible {opacity:1; transform:translateY(0); transition:all 1s ease-in-out;}
 h2 {color:#222; margin-bottom:20px;}
 footer {background:#222; color:#fff; text-align:center; padding:20px;}
